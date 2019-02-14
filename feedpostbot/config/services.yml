@@ -12,7 +12,6 @@ services:
             - '%core.root_path%'
             - '%core.php_ext%'
             - '@dispatcher'
-    
     ger.feedpostbot.cron.task.feedpostbot_cron:
         class: ger\feedpostbot\cron\task\feedpostbot_cron
         arguments:
@@ -22,3 +21,7 @@ services:
             - [set_name, [cron.task.feedpostbot_cron]]
         tags:
             - { name: cron.task }
+    ger.feedpostbot.fetcher:
+        class: ger\feedpostbot\controller\fetcher
+        arguments:
+            - '@ger.feedpostbot.classes.driver'

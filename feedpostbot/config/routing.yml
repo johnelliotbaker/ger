@@ -1,0 +1,3 @@
+ger_feedpostbot_fetcher:
+    path: /feedpostbot/fetcher/
+    defaults: { _controller: ger.feedpostbot.fetcher:handle}
