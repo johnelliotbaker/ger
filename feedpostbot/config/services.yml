@@ -25,3 +25,4 @@ services:
         class: ger\feedpostbot\controller\fetcher
         arguments:
             - '@ger.feedpostbot.classes.driver'
+            - '@auth'
