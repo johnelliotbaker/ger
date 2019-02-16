@@ -243,6 +243,7 @@ class driver
 		}
         $ns = $content->getNamespaces(true);
 
+        $return = [];
 		foreach($content->entry as $item)
 		{
 			$append = array(
